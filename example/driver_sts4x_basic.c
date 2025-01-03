@@ -40,7 +40,7 @@ static sts4x_handle_t gs_handle;        /**< sts4x handle */
 
 /**
  * @brief     basic example init
- * @param[in] addr is the iic device address
+ * @param[in] addr iic device address
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -82,7 +82,7 @@ uint8_t sts4x_basic_init(sts4x_address_t addr)
 
 /**
  * @brief      basic example read
- * @param[out] *temperature points to a converted temperature buffer
+ * @param[out] *temperature pointer to a converted temperature buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -122,7 +122,7 @@ uint8_t sts4x_basic_deinit(void)
 
 /**
  * @brief      basic example get serial number
- * @param[out] *num points to a number buffer
+ * @param[out] *num pointer to a number buffer
  * @return     status code
  *             - 0 success
  *             - 1 get serial number failed
