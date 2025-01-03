@@ -120,56 +120,56 @@ typedef struct sts4x_info_s
 
 /**
  * @brief     initialize sts4x_handle_t structure
- * @param[in] HANDLE points to an sts4x handle structure
- * @param[in] STRUCTURE is sts4x_handle_t
+ * @param[in] HANDLE pointer to an sts4x handle structure
+ * @param[in] STRUCTURE sts4x_handle_t
  * @note      none
  */
 #define DRIVER_STS4X_LINK_INIT(HANDLE, STRUCTURE)            memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link iic_init function
- * @param[in] HANDLE points to an sts4x handle structure
- * @param[in] FUC points to an iic_init function address
+ * @param[in] HANDLE pointer to an sts4x handle structure
+ * @param[in] FUC pointer to an iic_init function address
  * @note      none
  */
 #define DRIVER_STS4X_LINK_IIC_INIT(HANDLE, FUC)              (HANDLE)->iic_init = FUC
 
 /**
  * @brief     link iic_deinit function
- * @param[in] HANDLE points to an sts4x handle structure
- * @param[in] FUC points to an iic_deinit function address
+ * @param[in] HANDLE pointer to an sts4x handle structure
+ * @param[in] FUC pointer to an iic_deinit function address
  * @note      none
  */
 #define DRIVER_STS4X_LINK_IIC_DEINIT(HANDLE, FUC)            (HANDLE)->iic_deinit = FUC
 
 /**
  * @brief     link iic_read_cmd function
- * @param[in] HANDLE points to an sts4x handle structure
- * @param[in] FUC points to an iic_read_cmd function address
+ * @param[in] HANDLE pointer to an sts4x handle structure
+ * @param[in] FUC pointer to an iic_read_cmd function address
  * @note      none
  */
 #define DRIVER_STS4X_LINK_IIC_READ_COMMAND(HANDLE, FUC)      (HANDLE)->iic_read_cmd = FUC
 
 /**
  * @brief     link iic_write_cmd function
- * @param[in] HANDLE points to an sts4x handle structure
- * @param[in] FUC points to an iic_write_cmd function address
+ * @param[in] HANDLE pointer to an sts4x handle structure
+ * @param[in] FUC pointer to an iic_write_cmd function address
  * @note      none
  */
 #define DRIVER_STS4X_LINK_IIC_WRITE_COMMAND(HANDLE, FUC)     (HANDLE)->iic_write_cmd = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to an sts4x handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to an sts4x handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_STS4X_LINK_DELAY_MS(HANDLE, FUC)              (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to an sts4x handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to an sts4x handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_STS4X_LINK_DEBUG_PRINT(HANDLE, FUC)           (HANDLE)->debug_print = FUC
@@ -187,7 +187,7 @@ typedef struct sts4x_info_s
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an sts4x info structure
+ * @param[out] *info pointer to an sts4x info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -197,8 +197,8 @@ uint8_t sts4x_info(sts4x_info_t *info);
 
 /**
  * @brief     set the iic address
- * @param[in] *handle points to an sts4x handle structure
- * @param[in] addr is the chip iic address
+ * @param[in] *handle pointer to an sts4x handle structure
+ * @param[in] addr chip iic address
  * @return    status code
  *            - 0 success
  *            - 1 set addr failed
@@ -209,8 +209,8 @@ uint8_t sts4x_set_addr(sts4x_handle_t *handle, sts4x_address_t addr);
 
 /**
  * @brief      get the iic address
- * @param[in]  *handle points to an sts4x handle structure
- * @param[out] *addr points to a chip iic address buffer
+ * @param[in]  *handle pointer to an sts4x handle structure
+ * @param[out] *addr pointer to a chip iic address buffer
  * @return      status code
  *              - 0 success
  *              - 1 get addr failed
@@ -221,7 +221,7 @@ uint8_t sts4x_get_addr(sts4x_handle_t *handle, sts4x_address_t *addr);
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an sts4x handle structure
+ * @param[in] *handle pointer to an sts4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic initialization failed
@@ -234,7 +234,7 @@ uint8_t sts4x_init(sts4x_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an sts4x handle structure
+ * @param[in] *handle pointer to an sts4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic deinit failed
@@ -247,10 +247,10 @@ uint8_t sts4x_deinit(sts4x_handle_t *handle);
 
 /**
  * @brief      read temperature and humidity
- * @param[in]  *handle points to an sts4x handle structure
- * @param[in]  mode is the read mode
- * @param[out] *temperature_raw points to a raw temperature buffer
- * @param[out] *temperature_s points to a converted temperature buffer
+ * @param[in]  *handle pointer to an sts4x handle structure
+ * @param[in]  mode read mode
+ * @param[out] *temperature_raw pointer to a raw temperature buffer
+ * @param[out] *temperature_s pointer to a converted temperature buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -263,7 +263,7 @@ uint8_t sts4x_read(sts4x_handle_t *handle, sts4x_mode_t mode, uint16_t *temperat
 
 /**
  * @brief     soft reset the chip
- * @param[in] *handle points to an sts4x handle structure
+ * @param[in] *handle pointer to an sts4x handle structure
  * @return    status code
  *            - 0 success
  *            - 1 soft reset failed
@@ -275,8 +275,8 @@ uint8_t sts4x_soft_reset(sts4x_handle_t *handle);
 
 /**
  * @brief      get serial number
- * @param[in]  *handle points to an sts4x handle structure
- * @param[out] *num points to a number buffer
+ * @param[in]  *handle pointer to an sts4x handle structure
+ * @param[out] *num pointer to a number buffer
  * @return     status code
  *             - 0 success
  *             - 1 get serial number failed
@@ -300,11 +300,11 @@ uint8_t sts4x_get_serial_number(sts4x_handle_t *handle, uint8_t num[4]);
 
 /**
  * @brief      write and read bytes
- * @param[in]  *handle points to an sts4x handle structure
- * @param[in]  cmd is the send command
- * @param[in]  delay_ms is the delay in ms
- * @param[out] *data points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to an sts4x handle structure
+ * @param[in]  cmd sent command
+ * @param[in]  delay_ms delay in ms
+ * @param[out] *data pointer to a data buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 write read failed
