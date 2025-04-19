@@ -10,7 +10,7 @@
 
 The STS4x is a fully digital temperature sensor platform offering different accuracy classes. The I2C interface provides multiple preconfigured I2C addresses and enables an ultra-low power budget. Designed to cost, this four-pin dual-flat-no-leads package is suitable for surface mount technology (SMT) processing.
 
-LibDriver STS4X is the full function driver of STS4X launched by LibDriver.It provides functions of temperature continuous mode reading and temperature single mode reading. LibDriver is MISRA compliant.
+LibDriver STS4X is a full-featured driver of STS4X launched by LibDriver.It provides functions of temperature continuous mode reading and temperature single mode reading. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
