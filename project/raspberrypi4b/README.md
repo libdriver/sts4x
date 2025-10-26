@@ -105,7 +105,7 @@ find_package(sts4x REQUIRED)
    sts4x (-e read | --example=read) [--addr=<0 | 1 | 2>] [--times=<num>]
    ```
 
-7. Run sts4x number function.
+6. Run sts4x number function.
 
    ```shell
    sts4x (-e number | --example=number) [--addr=<0 | 1 | 2>]
