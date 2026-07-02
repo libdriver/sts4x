@@ -246,7 +246,7 @@ uint8_t sts4x_init(sts4x_handle_t *handle);
 uint8_t sts4x_deinit(sts4x_handle_t *handle);
 
 /**
- * @brief      read temperature and humidity
+ * @brief      read temperature
  * @param[in]  *handle pointer to an sts4x handle structure
  * @param[in]  mode read mode
  * @param[out] *temperature_raw pointer to a raw temperature buffer
