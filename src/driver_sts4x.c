@@ -275,7 +275,7 @@ uint8_t sts4x_get_addr(sts4x_handle_t *handle, sts4x_address_t *addr)
 }
 
 /**
- * @brief      read temperature and humidity
+ * @brief      read temperature
  * @param[in]  *handle pointer to an sts4x handle structure
  * @param[in]  mode read mode
  * @param[out] *temperature_raw pointer to a raw temperature buffer

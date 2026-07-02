@@ -143,7 +143,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ga1b04ddb8d39fe10c99b2406add18faf5" id="r_ga1b04ddb8d39fe10c99b2406add18faf5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1b04ddb8d39fe10c99b2406add18faf5">sts4x_deinit</a> (<a class="el" href="#ga8677f2a10b1bcc98ad1fe898b114a074">sts4x_handle_t</a> *handle)</td></tr>
 <tr class="memdesc:ga1b04ddb8d39fe10c99b2406add18faf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">close the chip  <br /></td></tr>
 <tr class="memitem:gad253f7d5a6633e31d276052f1c4cb953" id="r_gad253f7d5a6633e31d276052f1c4cb953"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad253f7d5a6633e31d276052f1c4cb953">sts4x_read</a> (<a class="el" href="#ga8677f2a10b1bcc98ad1fe898b114a074">sts4x_handle_t</a> *handle, <a class="el" href="#ga5649437a68c8acee207025fbd6a417be">sts4x_mode_t</a> mode, uint16_t *temperature_raw, float *temperature_s)</td></tr>
-<tr class="memdesc:gad253f7d5a6633e31d276052f1c4cb953"><td class="mdescLeft">&#160;</td><td class="mdescRight">read temperature and humidity  <br /></td></tr>
+<tr class="memdesc:gad253f7d5a6633e31d276052f1c4cb953"><td class="mdescLeft">&#160;</td><td class="mdescRight">read temperature  <br /></td></tr>
 <tr class="memitem:gac2ea496ba73da97d9ff32179c6dfccc0" id="r_gac2ea496ba73da97d9ff32179c6dfccc0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac2ea496ba73da97d9ff32179c6dfccc0">sts4x_soft_reset</a> (<a class="el" href="#ga8677f2a10b1bcc98ad1fe898b114a074">sts4x_handle_t</a> *handle)</td></tr>
 <tr class="memdesc:gac2ea496ba73da97d9ff32179c6dfccc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">soft reset the chip  <br /></td></tr>
 <tr class="memitem:ga34994acd7754132908542e377865da6e" id="r_ga34994acd7754132908542e377865da6e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga34994acd7754132908542e377865da6e">sts4x_get_serial_number</a> (<a class="el" href="#ga8677f2a10b1bcc98ad1fe898b114a074">sts4x_handle_t</a> *handle, uint8_t num[4])</td></tr>
@@ -452,7 +452,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>read temperature and humidity </p>
+<p>read temperature </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an sts4x handle structure </td></tr>
